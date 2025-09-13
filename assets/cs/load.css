@@ -1,0 +1,72 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: sans-serif;
+background: linear-gradient(to right, black, green);
+  color: white;
+}
+
+/* Main container */
+.load {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+/* Logo and loader wrapper */
+figure {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+}
+
+figure img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* optional: make it round */
+  display: block;
+}
+
+/* Circular loader */
+figure::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top: 5px dotted #00ff00; /* green color */
+  animation: spin 1s linear infinite;
+  z-index: 2;
+}
+
+/* Loading animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Optional: text styling */
+figcaption h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: rgba(149, 255, 0, 0.537); /* neon green */
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+

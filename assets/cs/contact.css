@@ -1,0 +1,193 @@
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+body, html {
+ overflow: hidden;
+ overflow-y: auto;
+ 
+}
+
+.container {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.73);
+  height: 100vh;
+  width: 100%;
+  
+}
+
+.card-items {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  display: flex;
+  width: 80%;
+  border-radius: 15px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+figure {
+  width: 50%;
+  margin: 0;
+}
+
+figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card {
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+}
+.location-img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top:0;
+  left: 0;
+  z-index: -1;
+  opacity: .7;
+}
+.card h1 {
+   font-size: clamp(2rem, 4vw, 4rem);
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  font-size: clamp(1rem, 1.75vw, 3rem);
+  margin-bottom: 1.5rem;
+}
+
+.card h3 span {
+  color: rgb(136, 233, 9);
+  font-weight: bold;
+}
+
+.card .btn {
+  padding: 0.5rem 1rem;
+   font-size: clamp(.5rem, 1vw, 3rem);
+  border: 1px solid rgb(41, 68, 5);
+  border-radius: 5px;
+  font-weight: bold;
+  color: rgba(33, 56, 2, 0.851);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin-left: auto;
+  text-decoration: none;
+  background-color: white;
+}
+
+.card .btn:hover {
+  background-color: rgb(41, 68, 5);
+  color: white;
+}
+.social {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.social a.icon {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.social a.icon:hover {
+  transform: scale(1.1);
+}
+
+/* Individual brand background colors */
+.social a.whatsapp {
+  background-color: #25D366;
+}
+
+.social a.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, 
+    #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.social a.facebook {
+  background-color: #3b5998;
+}
+
+.social a.messenger {
+  background-color: #0084ff;
+}
+
+.social a.twitter {
+  background-color: #000000; /* Twitter-X is black */
+}
+
+@media (max-width:768px){
+    figure{
+        width:65%
+        
+    }
+    figure img{
+        width: 100%;
+        object-fit: cover;
+    }
+    figcaption{
+        width: 40%;
+    }
+    .card{
+        padding: 1rem;
+    }
+}
+@media screen and (max-width: 568px) {
+  .card-items {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  figure, .card {
+    width: 100%;
+  }
+
+  figure img {
+aspect-ratio: 2/1; 
+display: block;}
+  
+}
+@media (max-width:435px){
+  
+.card input{
+    padding: .5rem;
+  }
+  .card h1{
+    font-size: 1rem;
+  }
+  .card h3{
+    font-size: .75rem;
+  }
+  .card .btn{
+    padding: .25rem .5rem;
+  }
+}
