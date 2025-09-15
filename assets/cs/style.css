@@ -47,7 +47,6 @@ header {
     border-radius: 16px;
     /* Optional: for a softer glass edge */
     padding: 1rem;
-    backdrop-filter: blur(20px);
     border: 1px solid var(--navbar-border);
     /* Subtle border */
     background: radial-gradient(circle at center,
