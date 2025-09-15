@@ -88,7 +88,8 @@ figure img {
   justify-content: space-between;
 }
 .card div input:first-child {
-  width: 60%;
+  width: 70%;
+  margin-right: 1rem;
 }
 .card div input:nth-child(2){
   width: 30%;
